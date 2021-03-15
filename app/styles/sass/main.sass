@@ -2,4 +2,148 @@
 @import "blocks/**/*"
 
 // Кстомные стили
-	
+
+main
+	height: 100vh
+	width: 3840px
+
+// ? Подсветка газоровода в зависимости от дедлайна ремонта
+
+.stat1
+	.vertical,
+	.horizontal
+		background-color: #1e81f1
+		box-shadow: 0px 0px 3px 1px rgba(#1e81f1, .6)
+	.crane
+		background: url(../images/dist/icon/crane.svg) center no-repeat
+.stat2
+	.vertical,
+	.horizontal
+		background-color: #ff0000
+		box-shadow: 0px 0px 3px 1px rgba(#ff0000, .6)
+	.crane
+		background: url(../images/dist/icon/crane-stat2.svg) center no-repeat
+.stat3
+	.vertical,
+	.horizontal
+		background-color: #00c479
+		box-shadow: 0px 0px 3px 1px rgba(#00c479, .6)
+	.crane
+		background: url(../images/dist/icon/crane-stat2.svg) center no-repeat
+.stat4
+	.vertical,
+	.horizontal
+		background-color: #ff0606
+		box-shadow: 0px 0px 3px 1px rgba(#ff0606, .6)
+
+.horizontal // ? Стили для горизотальной части газопровода
+	height: 5px
+.vertical  // ? Стили для вертикальной части газопровода
+	width: 5px
+
+// ? Обвязка 20го крана
+.transit
+	display: flex
+	width: calc(5% - 30px)
+	&__input
+		&-vertical
+			.wrap
+				margin-left: -7px
+	&__output
+		width: 100%
+	&__wrapper
+		height: 100%
+		display: flex
+		.horizontal
+			width: 100px
+		.trumpet__vertical
+			height: 100%
+			display: flex
+			align-items: center
+			.wrap
+				height: 100%
+				display: flex
+				flex-direction: column
+				align-items: center
+			.vertical
+				height: 100%
+			.transit__crane
+				display: flex
+				align-items: center
+				height: 100%
+				width: 50px
+				&-input
+					width: 25px
+				&-output
+					margin-left: -7px
+				.crane
+					width: 100%
+		.transit__output-vertical
+			margin-left: -9px
+
+// ? Камера приёма/запуска
+.camera
+	display: flex
+	align-items: center
+	margin-left: -49px
+	&__wrap
+		width: 13px
+		height: 13px
+		background: url(../images/dist/icon/camera.svg) center no-repeat
+	&__trumpet
+		width: 6px
+	.crane
+		width: 22px
+		height: 13px
+		margin-left: -2px
+
+// ? Стилизация кранов
+.crane
+	width: 30px
+	height: 19px
+	position: relative
+	.number
+		position: absolute
+		color: #fff
+		bottom: -100%
+		font-size: 12px
+		left: 50%
+		transform: translateX(-50%)
+		font-weight: 700
+// ? Вертикальные краны
+.crane-vertical
+	transform: rotate(90deg)
+	height: 13px
+	width: 19px
+
+// ? старый корридор
+.old-track
+	height: 40%
+
+.gasket
+	height: 10%
+
+// ? Новый корридор
+.new__track
+	height: 50%
+
+// ? Центр 1
+.trumpet9
+	height: 10%
+	&__main
+		display: flex
+		justify-content: start
+		width: 100%
+		height: 100%
+	.trumpet__wrap
+		width: 5%
+		display: flex
+		align-items: center
+		margin-top: -40px
+		#trumpet9-main0775,
+		#trumpet9-main775753,
+		#trumpet9-main753746,
+		#trumpet9-main745
+			width: 100%
+
+// ? Ужгород
