@@ -1,213 +1,246 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="form-components">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/main.min.css">
-</head>
+    <!-- ПОИСК -->
+    <div class="wrapper">
+        <span class="wrapper__label">SEARCH INPUT</span>
 
-<body>
 
-    <div class="form-components">
+        <div class="search-wrapper">
 
-        <!-- ПОИСК -->
-        <div class="wrapper">
-            <span class="wrapper__label">SEARCH INPUT</span>
-
-            
-            <div class="search-wrapper">
-
-                <!-- БАЗОВЫЙ ПОИСК -->
-                <div class="search">
-                    <input type="text" class="search__input" placeholder="Search">
-                </div>
-                <!------->
-
+            <!-- БАЗОВЫЙ ПОИСК -->
+            <div class="search">
+                <input type="text" class="search__input" placeholder="Search">
             </div>
-            
-            <div class="search-wrapper">
+            <!------->
 
-                <!-- ПОИСК С ЛЕВОЙ ИКОНКОЙ -->
+        </div>
+
+        <div class="search-wrapper">
+
+            <!-- ПОИСК С ЛЕВОЙ ИКОНКОЙ -->
+            <div class="search search-left-icon">
+                <span class="search__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" />
+                    </svg>
+                </span>
+                <input type="text" class="search__input" placeholder="Search">
+            </div>
+            <!------->
+
+        </div>
+
+        <div class="search-wrapper">
+
+            <!-- ПОИСК С ЛЕВОЙ ИКОНКОЙ -->
+            <div class="search search-right-icon">
+                <input type="text" class="search__input" placeholder="Search">
+                <span class="search__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" />
+                    </svg>
+                </span>
+            </div>
+            <!------->
+
+        </div>
+
+
+
+        <!-- SERCH END -->
+
+    </div>
+
+    <!-- ЧЕКБОКСЫ -->
+    <div class="wrapper">
+        <span class="wrapper__label">CHECKBOX</span>
+
+        <!-- CHECKBOX -->
+
+        <label class="checkbox">
+            <input type="checkbox" class="checkbox__input" value="Checkbox 1">
+            <span class="checkbox__box"></span>
+            <span class="checkbox__label">Checkbox 1</span>
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" class="checkbox__input" value="Checkbox 2">
+            <span class="checkbox__box"></span>
+            <span class="checkbox__label">Checkbox 2</span>
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" class="checkbox__input" value="Checkbox 3">
+            <span class="checkbox__box"></span>
+            <span class="checkbox__label">Checkbox 3</span>
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" class="checkbox__input" value="Checkbox 4">
+            <span class="checkbox__box"></span>
+            <span class="checkbox__label">Checkbox 4</span>
+        </label>
+
+
+        <!-- CHECKBOX END -->
+
+    </div>
+
+    <!-- РАДИО КНОПКИ -->
+    <div class="wrapper">
+        <span class="wrapper__label">RADIO</span>
+
+        <!-- RADIO -->
+
+        <label class="radio">
+            <input type="radio" class="radio__input" name="radio" value="Radio 1">
+            <span class="radio__box"></span>
+            <span class="radio__label">Radio 1</span>
+        </label>
+
+        <label class="radio">
+            <input type="radio" class="radio__input" name="radio" value="Radio 2">
+            <span class="radio__box"></span>
+            <span class="radio__label">Radio 2</span>
+        </label>
+
+
+        <!-- RADIO END -->
+
+    </div>
+
+    <!-- DROPDOWN ЧЕКБОКСЫ/RADIO -->
+    <div class="wrapper dropdown">
+        <span class="wrapper__label">CHECKBOX-DROPDOWN/RADIO</span>
+
+        <!-- CHECKBOX DROPDOWN -->
+
+        <div class="checkbox-dropdown" id="checkbox-dropdown">
+            <div class="checkbox-dropdown__label">
+                <span class="checkbox-dropdown__label-text">С поиском</span>
+                <span class="checkbox-dropdown__label-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                            d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z" />
+                    </svg>
+                </span>
+            </div>
+            <div class="checkbox-dropdown__dropdown">
                 <div class="search search-left-icon">
                     <span class="search__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" />
-                        </svg>
-                    </span>
-                    <input type="text" class="search__input" placeholder="Search">
-                </div>
-                <!------->
-                
-            </div>
-
-            <div class="search-wrapper">
-
-                <!-- ПОИСК С ЛЕВОЙ ИКОНКОЙ -->
-                <div class="search search-right-icon">
-                    <input type="text" class="search__input" placeholder="Search">
-                    <span class="search__icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" />
-                        </svg>
-                    </span>
-                </div>
-                <!------->
-
-            </div>
-            
-
-
-            <!-- CHECKBOX END -->
-
-        </div>
-
-        <!-- ЧЕКБОКСЫ -->
-        <div class="wrapper">
-            <span class="wrapper__label">CHECKBOX</span>
-
-            <!-- CHECKBOX -->
-
-            <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" value="Checkbox 1">
-                <span class="checkbox__box"></span>
-                <span class="checkbox__label">Checkbox 1</span>
-            </label>
-            <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" value="Checkbox 2">
-                <span class="checkbox__box"></span>
-                <span class="checkbox__label">Checkbox 2</span>
-            </label>
-            <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" value="Checkbox 3">
-                <span class="checkbox__box"></span>
-                <span class="checkbox__label">Checkbox 3</span>
-            </label>
-            <label class="checkbox">
-                <input type="checkbox" class="checkbox__input" value="Checkbox 4">
-                <span class="checkbox__box"></span>
-                <span class="checkbox__label">Checkbox 4</span>
-            </label>
-
-
-            <!-- CHECKBOX END -->
-
-        </div>
-
-        <!-- РАДИО КНОПКИ -->
-        <div class="wrapper">
-            <span class="wrapper__label">RADIO</span>
-
-            <!-- RADIO -->
-
-            <label class="radio">
-                <input type="radio" class="radio__input" name="radio" value="Radio 1">
-                <span class="radio__box"></span>
-                <span class="radio__label">Radio 1</span>
-            </label>
-
-            <label class="radio">
-                <input type="radio" class="radio__input" name="radio" value="Radio 2">
-                <span class="radio__box"></span>
-                <span class="radio__label">Radio 2</span>
-            </label>
-
-
-            <!-- RADIO END -->
-
-        </div>
-
-        <!-- DROPDOWN ЧЕКБОКСЫ -->
-        <div class="wrapper dropdown">
-            <span class="wrapper__label">CHECKBOX-DROPDOWN</span>
-
-            <!-- CHECKBOX DROPDOWN -->
-
-            <div class="checkbox-dropdown">
-                <div class="checkbox-dropdown__label">
-                    <span class="checkbox-dropdown__label-text">С поиском</span>
-                    <span class="checkbox-dropdown__label-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path
-                                d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z" />
+                                d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" />
                         </svg>
                     </span>
+                    <input type="text" class="search__input" id="search__input" placeholder="Search">
                 </div>
-                <div class="checkbox-dropdown__dropdown">
-                    <div class="search search-left-icon">
-                        <span class="search__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" />
-                            </svg>
-                        </span>
-                        <input type="text" class="search__input" placeholder="Search">
-                    </div>
-                    <span class="checkbox-dropdown__input-icon"></span>
-                    <div class="checkbox-dropdown__checkboxes">
-                        <label class="checkbox">
-                            <input type="checkbox" class="checkbox__input" value="Checkbox 1">
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__label">Checkbox 1</span>
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox" class="checkbox__input" value="Checkbox 2">
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__label">Checkbox 2</span>
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox" class="checkbox__input" value="Checkbox 3">
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__label">Checkbox 3</span>
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox" class="checkbox__input" value="Checkbox 4">
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__label">Checkbox 4</span>
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox" class="checkbox__input" value="Checkbox 5">
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__label">Checkbox 5</span>
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox" class="checkbox__input" value="Checkbox 6">
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__label">Checkbox 6</span>
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox" class="checkbox__input" value="Checkbox 7">
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__label">Checkbox 7</span>
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox" class="checkbox__input" value="Checkbox 8">
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__label">Checkbox 8</span>
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox" class="checkbox__input" value="Checkbox 9">
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__label">Checkbox 9</span>
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox" class="checkbox__input" value="Checkbox 10">
-                            <span class="checkbox__box"></span>
-                            <span class="checkbox__label">Checkbox 10</span>
-                        </label>
-                        
-                    </div>
+                <span class="checkbox-dropdown__input-icon"></span>
+                <div class="checkbox-dropdown__checkboxes">
+                    <label class="checkbox">
+                        <input type="checkbox" class="checkbox__input" value="Checkbox 1">
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__label">Checkbox 1</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" class="checkbox__input" value="Checkbox 2">
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__label">Checkbox 2</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" class="checkbox__input" value="Checkbox 3">
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__label">Checkbox 3</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" class="checkbox__input" value="Checkbox 4">
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__label">Checkbox 4</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" class="checkbox__input" value="Checkbox 5">
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__label">Checkbox 5</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" class="checkbox__input" value="Checkbox 6">
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__label">Checkbox 6</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" class="checkbox__input" value="Checkbox 7">
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__label">Checkbox 7</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" class="checkbox__input" value="Checkbox 8">
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__label">Checkbox 8</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" class="checkbox__input" value="Checkbox 9">
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__label">Checkbox 9</span>
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" class="checkbox__input" value="Checkbox 10">
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__label">Checkbox 10</span>
+                    </label>
+
                 </div>
             </div>
-
-            <!-- CHECKBOX DROPDOWN END-->
-
         </div>
 
+        <!-- CHECKBOX DROPDOWN END-->
+
+        <!-- RADIO DROPDOWN -->
+
+        <div class="radio-dropdown" id="radio-dropdown">
+            <div class="radio-dropdown__label">
+                <span class="radio-dropdown__label-text">Без поиска</span>
+                <span class="radio-dropdown__label-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                            d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z" />
+                    </svg>
+                </span>
+            </div>
+            <div class="radio-dropdown__dropdown">
+                <span class="radio-dropdown__input-icon"></span>
+                <div class="radio-dropdown__radios">
+                    <label class="radio">
+                        <input type="radio" class="radio__input" name="radio" value="Не выбрано">
+                        <span class="radio__box"></span>
+                        <span class="radio__label">Не выбрано</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" class="radio__input" name="radio" value="radio 1">
+                        <span class="radio__box"></span>
+                        <span class="radio__label">Radio 1</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" class="radio__input" name="radio" value="radio 2">
+                        <span class="radio__box"></span>
+                        <span class="radio__label">Radio 2</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" class="radio__input" name="radio" value="radio 3">
+                        <span class="radio__box"></span>
+                        <span class="radio__label">Radio 3</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" class="radio__input" name="radio" value="radio 4">
+                        <span class="radio__box"></span>
+                        <span class="radio__label">Radio 4</span>
+                    </label>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- RADIO DROPDOWN END-->
 
     </div>
 
 
-
-    <!--#include virtual="/parts/footer.html" -->
+</div>

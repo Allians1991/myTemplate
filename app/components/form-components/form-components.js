@@ -1,6 +1,6 @@
 //CHECKBOX DROPDOWN
 
-const checkboxDropdown = document.querySelector('.checkbox-dropdown');
+const checkboxDropdown = document.querySelector('#checkbox-dropdown');
 
 function openCloseCheckboxDropdown() {
     document.addEventListener('click', e => {
@@ -15,9 +15,10 @@ function openCloseCheckboxDropdown() {
 
 }
 openCloseCheckboxDropdown();
+
 function countingSelectedItems() {
     const checkboxItems = checkboxDropdown.querySelectorAll('.checkbox__input'),
-          checkboxDropdownLabel = checkboxDropdown.querySelector('.checkbox-dropdown__label-text')
+        checkboxDropdownLabel = checkboxDropdown.querySelector('.checkbox-dropdown__label-text')
     checkboxDropdownLabelInner = checkboxDropdownLabel.innerHTML;
     let count = 0;
 
@@ -40,3 +41,33 @@ function countingSelectedItems() {
     });
 }
 countingSelectedItems();
+
+// RADIO  DROPDOWN
+const radioDropdown = document.querySelector('#radio-dropdown');
+
+function openCloseRadioDropdown() {
+    document.addEventListener('click', e => {
+        let target = e.target;
+        if (target.closest('.radio-dropdown__label')) {
+            radioDropdown.classList.toggle('radio-dropdown__in')
+        }
+        if (!target.closest('.radio-dropdown__label') && radioDropdown.classList.contains('radio-dropdown__in')) {
+            radioDropdown.classList.remove('radio-dropdown__in')
+        }
+    });
+
+}
+openCloseRadioDropdown();
+
+function countingSelectedItemsRadio() {
+    const radioItems = radioDropdown.querySelectorAll('.radio__box');
+
+    radioItems.forEach(radio => {
+        radio.addEventListener('click', function (e) {
+            let radioLabel = e.target.parentElement.querySelector('.radio__label').innerHTML,
+                radioLabelTitle = radioDropdown.querySelector('.radio-dropdown__label-text');
+            radioLabelTitle.innerHTML = radioLabel;
+        });
+    })
+}
+countingSelectedItemsRadio();
